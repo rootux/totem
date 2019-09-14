@@ -19,7 +19,7 @@ if __name__ == "__main__":
   args = parser.parse_args()
 
   dispatcher = dispatcher.Dispatcher()
-  dispatcher.map("/wek/outputs", print_wek_input)
+  dispatcher.map("/wek/outputs", print_wek_inputs)
 
   server = osc_server.ThreadingOSCUDPServer(
       (args.ip, args.port), dispatcher)
